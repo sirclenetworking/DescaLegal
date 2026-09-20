@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support · Desca</title>
+<script type="module" src="https://unpkg.com/ionicons@7.2.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.2.2/dist/ionicons/ionicons.js"></script>
+<style>
+  :root{
+    --cream: #FBF8F2;
+    --cream-deep: #F1ECE0;
+    --cream-line: #E4DDCC;
+    --ink: #22201B;
+    --ink-soft: rgba(34,32,27,0.72);
+    --ink-muted: rgba(34,32,27,0.52);
+    --card: #FFFFFF;
+    --clay: #1A615D;
+    --clay-deep: #144A47;
+    --good-tint: #EAF3DE;
+    --good-text: #27500A;
+    --warn-tint: #FAEEDA;
+    --warn-text: #633806;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{
+    max-width:720px;
+    margin:0 auto;
+    padding:48px 24px 96px;
+  }
+  .badge{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    background:var(--cream-deep);
+    color:var(--ink-muted);
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    padding:7px 14px;
+    border-radius:999px;
+    margin-bottom:18px;
+  }
+  .badge ion-icon{font-size:13px;}
+  h1{
+    font-size:30px;
+    font-weight:700;
+    letter-spacing:-0.02em;
+    margin:0 0 6px;
+    color:var(--clay-deep);
+  }
+  .subtitle{
+    font-size:15px;
+    color:var(--ink-soft);
+    margin:0 0 8px;
+  }
+  .updated{
+    font-size:12px;
+    color:var(--ink-muted);
+    margin:0 0 36px;
+  }
+  .hero-card{
+    background:var(--clay-deep);
+    color:#FBF8F2;
+    border-radius:20px;
+    padding:24px 24px;
+    margin-bottom:28px;
+  }
+  .hero-card p{
+    margin:0 0 14px;
+    font-size:14.5px;
+    color:rgba(251,248,242,0.88);
+  }
+  .hero-card p:last-child{ margin-bottom:0; }
+  .hero-card strong{ color:#FFFFFF; }
+  .hero-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:#FFFFFF;
+    color:var(--clay-deep);
+    font-size:14px;
+    font-weight:600;
+    padding:11px 18px;
+    border-radius:12px;
+    text-decoration:none;
+  }
+  .hero-btn ion-icon{ font-size:16px; }
+  .card{
+    background:var(--card);
+    border-radius:16px;
+    padding:22px 24px;
+    margin-bottom:18px;
+    border:1px solid rgba(0,0,0,0.06);
+  }
+  h2{
+    font-size:17px;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 10px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .icon-chip{
+    width:30px;
+    height:30px;
+    border-radius:9px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--cream-deep);
+    flex-shrink:0;
+    font-size:15px;
+  }
+  .icon-chip ion-icon{ font-size:15px; color:var(--clay-deep); }
+  p{ margin:0 0 12px; font-size:14.5px; color:var(--ink-soft); }
+  p:last-child{ margin-bottom:0; }
+  ul{ margin:0 0 12px; padding-left:20px; }
+  li{ font-size:14.5px; color:var(--ink-soft); margin-bottom:6px; }
+  li:last-child{ margin-bottom:0; }
+  .faq{ margin-bottom:16px; }
+  .faq:last-child{ margin-bottom:0; }
+  .faq-q{
+    font-size:14.5px;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 5px;
+    display:flex;
+    gap:8px;
+  }
+  .faq-q ion-icon{ font-size:15px; color:var(--clay); flex-shrink:0; margin-top:2px; }
+  .faq-a{
+    font-size:14px;
+    color:var(--ink-soft);
+    margin:0 0 0 23px;
+  }
+  .pill-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin:14px 0 4px;
+  }
+  .pill{
+    font-size:12px;
+    font-weight:500;
+    padding:8px 13px;
+    border-radius:999px;
+    background:var(--good-tint);
+    color:var(--good-text);
+  }
+  .pill.warn{
+    background:var(--warn-tint);
+    color:var(--warn-text);
+  }
+  .divider{
+    height:1px;
+    background:var(--cream-line);
+    margin:36px 0 28px;
+    border:none;
+  }
+  a{ color:var(--clay); font-weight:600; text-decoration:none; }
+  a:hover{ text-decoration:underline; }
+  .contact-card{
+    background:var(--cream-deep);
+    border-radius:16px;
+    padding:22px 24px;
+    text-align:center;
+  }
+  .contact-card p{ color:var(--ink); }
+  footer{
+    text-align:center;
+    font-size:12px;
+    color:var(--ink-muted);
+    margin-top:40px;
+  }
+  footer a{ color:var(--ink-muted); font-weight:500; }
+  .toc{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-bottom:32px;
+  }
+  .toc a{
+    font-size:12.5px;
+    font-weight:500;
+    color:var(--ink-soft);
+    background:var(--card);
+    border:1px solid rgba(0,0,0,0.06);
+    padding:8px 13px;
+    border-radius:999px;
+  }
+  .toc a:hover{ text-decoration:none; background:var(--cream-deep); color:var(--ink); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <span class="badge">
+    <ion-icon name="help-buoy-outline"></ion-icon>
+    Support
+  </span>
+
+  <h1>Support</h1>
+  <p class="subtitle">Answers to common questions, and how to reach us if you need more help.</p>
+  <p class="updated">Last updated: 20/09/26</p>
+
+  <div class="hero-card">
+    <p><strong>Stuck on something?</strong> Most questions are answered below. If you can't find what you need, email us directly and we'll get back to you.</p>
+    <a class="hero-btn" href="mailto:support@cocial.in">
+      <ion-icon name="mail-outline"></ion-icon>
+      support@cocial.in
+    </a>
+  </div>
+
+  <nav class="toc">
+    <a href="#getting-started">Getting started</a>
+    <a href="#ai">AI features</a>
+    <a href="#timers-alarms">Timers &amp; alarms</a>
+    <a href="#notes-scanning">Notes &amp; scanning</a>
+    <a href="#purchases">Purchases &amp; subscriptions</a>
+    <a href="#data">Data &amp; backups</a>
+    <a href="#troubleshooting">Troubleshooting</a>
+    <a href="#contact">Contact us</a>
+  </nav>
+
+  <div class="card" id="getting-started">
+    <h2><span class="icon-chip"><ion-icon name="rocket-outline"></ion-icon></span>Getting started</h2>
+    <div class="faq">
+      <p class="faq-q"><ion-icon name="help-circle-outline"></ion-icon>Do I need to create an account?</p>
+      <p class="faq-a">No. Desca has no sign-up and no login. Open the app and everything is ready to use right away.</p>
+    </div>
+    <div class="faq">
+      <p class="faq-q"><ion-icon name="help-circle-outline"></ion-icon>Does Desca work without an internet connection?</p>
+      <p class="faq-a">Yes, for almost everything. Notes, timers, alarms, goals, and Apple Intelligence AI features all work fully offline. The only feature that needs a one-time internet connection is downloading the optional on-device AI model, and restoring a previous purchase.</p>
+    </div>
+  </div>
+
+  <div class="card" id="ai">
+    <h2><span class="icon-chip"><ion-icon name="sparkles-outline"></ion-icon></span>AI features</h2>
+    <div class="faq">
+      <p class="faq-q"><ion-icon name="help-circle-outline"></ion-icon>Why does it say "AI unavailable"?</p>
+      <p class="faq-a">This means Apple Intelligence isn't turned on for your device and the optional local AI model hasn't been downloaded yet. Go to Settings → On-Device AI in Desca, or turn on Apple Intelligence in your iPhone's own Settings app, then tap the refresh icon in Desca.</p>
+    </div>
+    <div class="faq">
+      <p class="faq-q"><ion-icon name="help-circle-outline"></ion-icon>Does my note content get sent anywhere?</p>
+      <p class="faq-a">No. Whichever AI path is used, Apple Intelligence or the local model, your note text is processed entirely on your device and never leaves it.</p>
+    </div>
+    <div class="faq">
+      <p class="faq-q"><ion-icon name="help-circle-outline"></ion-icon>Why is the AI model download so large?</p>
+      <p class="faq-a">The on-device model is around 475MB, since it's a full language model running locally rather than a lightweight call to a server. We'd recommend downloading it on Wi-Fi.</p>
+    </div>
+  </div>
+
+  <div class="card" id="timers-alarms">
+    <h2><span class="icon-chip"><ion-icon name="alarm-outline"></ion-icon></span>Timers &amp; alarms</h2>
+    <div class="faq">
+      <p class="faq-q"><ion-icon name="help-circle-outline"></ion-icon>My alarm didn't ring. What happened?</p>
+      <p class="faq-a">Check that notifications are allowed for Desca in your iPhone's Settings app, and that Focus/Do Not Disturb isn't set to silence alarms. Desca uses Apple's own AlarmKit system to ring alarms, the same system Apple's Clock app uses, so if Clock alarms work on your phone, Desca's will too.</p>
+    </div>
+    <div class="faq">
+      <p class="faq-q"><ion-icon name="help-circle-outline"></ion-icon>A Live Activity or Dynamic Island timer got stuck.</p>
+      <p class="faq-a">Go to Settings → Your Data → "Reset stuck timers/widgets" in Desca. This clears any leftover Live Activity without affecting your saved notes, goals, or history.</p>
+    </div>
+  </div>
+
+  <div class="card" id="notes-scanning">
+    <h2><span class="icon-chip"><ion-icon name="document-text-outline"></ion-icon></span>Notes &amp; scanning</h2>
+    <div class="faq">
+      <p class="faq-q"><ion-icon name="help-circle-outline"></ion-icon>Can I add photos to a note?</p>
+      <p class="faq-a">Yes, tap the photo icon in the note editor. This uses the system photo picker, so Desca never gets broader access to your photo library, just the specific photo you choose.</p>
+    </div>
+    <div class="faq">
+      <p class="faq-q"><ion-icon name="help-circle-outline"></ion-icon>Where do my flashcards go after I generate them?</p>
+      <p class="faq-a">Flashcards are filed under the note's subject. Review them from the Timer tab's Focus section by selecting that subject.</p>
+    </div>
+  </div>
+
+  <div class="card" id="purchases">
+    <h2><span class="icon-chip"><ion-icon name="card-outline"></ion-icon></span>Purchases &amp; subscriptions</h2>
+    <div class="faq">
+      <p class="faq-q"><ion-icon name="help-circle-outline"></ion-icon>How do I cancel Mythic Pass?</p>
+      <p class="faq-a">Subscriptions are managed entirely through Apple, not inside Desca. Open your iPhone's Settings app → your name → Subscriptions → Mythic Pass, and cancel from there.</p>
+    </div>
+    <div class="faq">
+      <p class="faq-q"><ion-icon name="help-circle-outline"></ion-icon>I bought a theme on my old phone. How do I get it back?</p>
+      <p class="faq-a">Purchases are tied to your Apple ID. Open Settings in Desca and look for a "Restore Purchases" option, or reinstall the app while signed into the same Apple ID you originally purchased with.</p>
+    </div>
+    <div class="faq">
+      <p class="faq-q"><ion-icon name="help-circle-outline"></ion-icon>I was charged but don't see my purchase unlocked.</p>
+      <p class="faq-a">Try Restore Purchases first, and make sure you're connected to the internet. If it still isn't showing up, email us with your Apple order receipt and we'll help sort it out.</p>
+    </div>
+    <div class="pill-row">
+      <span class="pill">Billed &amp; refunded through Apple</span>
+      <span class="pill warn">Core app always free</span>
+    </div>
+  </div>
+
+  <div class="card" id="data">
+    <h2><span class="icon-chip"><ion-icon name="cloud-download-outline"></ion-icon></span>Data &amp; backups</h2>
+    <div class="faq">
+      <p class="faq-q"><ion-icon name="help-circle-outline"></ion-icon>How do I back up my notes before switching phones?</p>
+      <p class="faq-a">Go to Settings → Your Data → "Export my data." This saves a file you can AirDrop or save to Files, then use "Import data" on your new device to bring everything back in.</p>
+    </div>
+    <div class="faq">
+      <p class="faq-q"><ion-icon name="help-circle-outline"></ion-icon>Will deleting the app delete my data?</p>
+      <p class="faq-a">Yes. Since everything is stored only on your device, uninstalling Desca removes your notes, flashcards, and goals along with it. Export a backup first if you want to keep a copy.</p>
+    </div>
+  </div>
+
+  <div class="card" id="troubleshooting">
+    <h2><span class="icon-chip"><ion-icon name="build-outline"></ion-icon></span>Troubleshooting</h2>
+    <div class="faq">
+      <p class="faq-q"><ion-icon name="help-circle-outline"></ion-icon>The app feels slow or a screen won't load.</p>
+      <p class="faq-a">Try fully closing Desca (swipe it away from the App Switcher) and reopening it. If a specific AI response seems stuck, wait a few seconds first, on-device generation can take a moment depending on your device.</p>
+    </div>
+    <div class="faq">
+      <p class="faq-q"><ion-icon name="help-circle-outline"></ion-icon>Notifications aren't showing up.</p>
+      <p class="faq-a">Check iPhone Settings → Notifications → Desca, and make sure Allow Notifications is on. Also check the individual toggles inside Desca's own Settings screen, since each notification type (goal check-ins, streaks, reminders) can be turned on or off separately.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="contact-card" id="contact">
+    <h2 style="justify-content:center;">Still need help?</h2>
+    <p>Email us at <a href="mailto:support@cocial.in">support@cocial.in</a> and we'll get back to you as soon as we can. It helps to include your iPhone model, iOS version, and a quick description of what happened.</p>
+  </div>
+
+  <footer>Desca is built and maintained independently. See our <a href="Privacy-policy.html">Privacy Policy</a> and <a href="Terms-of-use.html">Terms of Use</a>.</footer>
+
+</div>
+</body>
+</html>
